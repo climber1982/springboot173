@@ -7,8 +7,9 @@
 <body>
   <div align="center">
      <form th:action="@{addUser}" method="post">
-         用户名：<input type="text" name="userName"><span th:text="${user.userName}"></span><p/>
-         用户年龄：<input type="text" name="userAge"><span th:text="${user.userAge}"></span><p/>
+                  <input type="text" name="userId" th:value="${user.userId}">
+         用户名：<input type="text" name="userName" th:value="${user.userName}"><span th:text="${user.userName}"></span><p/>
+         用户年龄：<input type="text" name="userAge" th:value="${user.userAge}"><span th:text="${user.userAge}"></span><p/>
          <input type="submit"><p/>
      </form>
   </div>

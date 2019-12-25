@@ -51,6 +51,16 @@ public class UserController {
         mv.addObject("userList",userService.findAll());
         return mv;
     }
+      @RequestMapping("gotoUpdateUser")
+    public ModelAndView gotoUpdateUser(String id){
+        ModelAndView mv=new ModelAndView("user");
+       //根据ID获取对象
+        UserEntity user=  userService.findUserById(id);
+          //把对象放入到模型
+         mv.addObject("user",user);
+
+        return  mv;
+    }
 
    @RequestMapping("gotoUserPage")
     public  ModelAndView gotoUserPage(){

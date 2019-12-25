@@ -10,13 +10,21 @@
          <tr>
              <td>用户名</td>
              <td>用户年龄</td>
+             <td>操作</td>
          </tr>
 
          <tr th:each="user,key:${userList}">
              <td th:text="${user.userName}"></td>
              <td th:text="${user.userAge}"></td>
+             <td><a th:href="@{gotoUpdateUser(id=${user.userId})}">修改</a>/
+                 <input type="button" value="删除" th:onclick="del([[${user.userId}]])"/></td>
          </tr>
      </table>
   </div>
+   <script>
+       function  del(id) {
+           alert(id);
+       }
+   </script>
 </body>
 </html>

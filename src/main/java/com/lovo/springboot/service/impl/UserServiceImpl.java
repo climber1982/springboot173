@@ -21,4 +21,9 @@ public class UserServiceImpl implements IUserService {
     public void savaUser(UserEntity user) {
         userDao.save(user);
     }
+
+    @Override
+    public UserEntity findUserById(String id) {
+        return userDao.findById(id).get();
+    }
 }
