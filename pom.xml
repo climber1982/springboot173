@@ -6,7 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>springBootJ173</name>
     <!-- <packaging>jar</packaging> -->
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <!-- 指定maven仓库 -->
     <repositories><!-- 发现依赖和扩展的远程资源库 -->
         <!-- maven自己官方仓库 -->
@@ -54,7 +54,7 @@
             <scope>provided</scope>
 
         </dependency>
-        <!-- 热启动 -->
+        <!-- 热启动-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

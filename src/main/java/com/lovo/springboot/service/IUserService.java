@@ -7,4 +7,6 @@ import java.util.List;
 public interface IUserService {
 
     public List<UserEntity> findAll();
+
+    public  void savaUser(UserEntity user);
 }

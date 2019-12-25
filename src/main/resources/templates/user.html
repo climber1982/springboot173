@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div align="center">
+     <form th:action="@{addUser}" method="post">
+         用户名：<input type="text" name="userName"><span th:text="${user.userName}"></span><p/>
+         用户年龄：<input type="text" name="userAge"><span th:text="${user.userAge}"></span><p/>
+         <input type="submit"><p/>
+     </form>
+  </div>
+</body>
+</html>
